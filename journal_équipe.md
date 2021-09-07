@@ -8,6 +8,7 @@ IDEES GENERALES -
 
 - BUT => slow pages : 
 - adoucir l'environnement visuel, 
+- remplacer les images par un dégradé
 - contrer la consommation d'images commerciales, 
 - rendre la navigation plus agréable, 
 - mode lecture (structuration du texte, taille de police, type de police, grasse, contraste, luminosité), 
