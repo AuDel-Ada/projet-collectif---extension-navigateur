@@ -6,7 +6,7 @@ IDEES GENERALES -
 
 2 / FUN
 
-- BUT => slow pages : 
+BUT => slow pages : 
 - adoucir l'environnement visuel, 
 - remplacer les images par un dégradé
 - contrer la consommation d'images commerciales, 
