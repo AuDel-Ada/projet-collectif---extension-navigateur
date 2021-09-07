@@ -37,4 +37,9 @@ POETISATION
 - créer une banque de mots durs et leurs trouver des équivalents slow
 - comment remplacer ces mots 
 
+Pour le 08/09 :
+- mise en commun du code existant
+- définir pop up / option
+
+
 
