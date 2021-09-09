@@ -15,8 +15,10 @@ function permuteElement () {
       if (node.nodeType === 3) {
         var text = node.nodeValue
 
-        for (let hardWord of hardWordsToSoftWordsFR.keys()) {
+        for (var hardWord of hardWordsToSoftWordsFR.keys()) {
+          console.log(hardWord)
           var softWord = hardWordsToSoftWordsFR.get(hardWord)
+          console.log(softWord)
           var replacedText = text.replace(hardWord, softWord)
           if (replacedText !== text) {
             element.replaceChild(document.createTextNode(replacedText), node)
