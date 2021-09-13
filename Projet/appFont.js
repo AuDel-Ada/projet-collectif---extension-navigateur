@@ -41,7 +41,7 @@ changeBackgroundColor.addEventListener("click", async () => {
 
 function setPageBackgroundColor() {
     chrome.storage.sync.get("color", ({ color }) => {
-        document.body.style.backgroundColor = "yellow";
+        document.body.style.backgroundColor = "white";
       });
 };
 

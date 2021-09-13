@@ -1,7 +1,7 @@
 var pics = document.getElementsByTagName ("img");
 function changePics (){
     for (let i=0;i<pics.length;i++){
-        pics[i].src=chrome.runtime.getURL("mola-mola.jpg");
+        pics[i].src=chrome.runtime.getURL("degrade2.svg");
     };
 };
-setTimeout(changePics, 5000);
+setInterval(changePics, 5000);
