@@ -1,0 +1,21 @@
+body{
+    background: none
+}
+
+.container{
+    width: 300px;
+    height: 400px;
+    background-color: #ddc7b0;
+    opacity: 80%;
+    border-radius: 50px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family: 'Tahoma';
+    font-size: larger;
+    filter: drop-shadow(16px 16px 20px #ad9173)
+}
+
+p{
+    font-weight: bold;
+}
