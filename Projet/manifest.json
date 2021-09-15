@@ -1,6 +1,6 @@
 {
-    "name": "Getting Started Example",
-    "description": "Build a cool-reading mode!",
+    "name": "Peaceful Reading",
+    "description": "Build a peaceful reading mode!",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
@@ -11,8 +11,18 @@
     ],
     "permissions": ["storage", "activeTab", "scripting"],
     "action": {
-        "default_popup": "popup.html"
-    },
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "degrade1_16.png",
+            "48": "degrade1_48.png",
+            "128": "degrade1_128.png"
+          }
+        },
+        "icons": {
+          "16": "degrade1_16.png",
+          "48": "degrade1_48.png",
+          "128": "degrade1_128.png"
+        },   
     "web_accessible_resources":[
         {
         "matches": ["<all_urls>"],

@@ -1,7 +1,8 @@
 const hardWordsToSoftWordsFR = new Map()
 
-hardWordsToSoftWordsFR.set('des', 'soleil')
-hardWordsToSoftWordsFR.set("la", "danse")
+hardWordsToSoftWordsFR.set(' des ', ' soleil ')
+hardWordsToSoftWordsFR.set(" la ", " danse ")
+hardWordsToSoftWordsFR.set(" the ", " dance ")
 
 function permuteElement() {
 
