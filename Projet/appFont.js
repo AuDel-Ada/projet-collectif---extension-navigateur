@@ -1,25 +1,45 @@
-// Initialize button with user's preferred color
-let changeTextFont = document.getElementById("font");
+const checkBox = document.getElementById("fontFamily");
 
-chrome.storage.sync.get("font", ({ font }) => {
-    changeTextFont.style.fontFamily = font;
+chrome.storage.sync.get(['verif'], function (checkTrueOrFalse){
+    checkBox.checked = checkTrueOrFalse.verif;
 });
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeTextFont.addEventListener("click", async () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    chrome.scripting.executeScript({
+checkBox.addEventListener("click", async () => {
+    chrome.storage.sync.set({verif : checkBox.checked});
+    isChecked()
+});
+
+async function isChecked(){
+    if (checkBox.checked == true){
+        console.log("is the true !")
+        let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: setPageTextFont,
-    });
-});
+        })
+    }else{
+        console.log("fallllllse")
+        let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        function: setResetFont,
+        })
+    }
+}
 
 // The body of this function will be executed as a content script inside the
 // current page
 function setPageTextFont() {
-    var globalFont = document.getElementsByTagName('*');
+    let globalFont = document.getElementsByTagName('*');
     for (let i = 0; i < globalFont.length; i++) {
         globalFont[i].style.fontFamily = 'Tahoma';
+    };
+};
+
+function setResetFont() {
+    let globalFont = document.getElementsByTagName('*');
+    for (let i = 0; i < globalFont.length; i++) {
+        globalFont[i].style.fontFamily = null;
     };
 };
 
