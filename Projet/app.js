@@ -1,15 +1,41 @@
+
+///
+
+// attentat
+// meurtre
+// viol
+// crise
+// critique
+// risque
+// nucléaire
+// attaque
+// harcèlement
+// gouvernement
+
+
+
+
+
+
 const hardWordsToSoftWordsFR = new Map()
 
-hardWordsToSoftWordsFR.set(' des ', ' soleil ')
-hardWordsToSoftWordsFR.set(" la ", " danse ")
-hardWordsToSoftWordsFR.set(" the ", " dance ")
+hardWordsToSoftWordsFR.set(' attentat ', ' twister ')
+hardWordsToSoftWordsFR.set(" crime ", " infamie ")
+hardWordsToSoftWordsFR.set(" gouvernement ", " soleil ")
+hardWordsToSoftWordsFR.set(" risque ", " étreinte ")
+hardWordsToSoftWordsFR.set(" attaque ", " tornade ")
+hardWordsToSoftWordsFR.set(" critique ", " caresse ")
+hardWordsToSoftWordsFR.set(" harcèlement ", " hullulement ")
+hardWordsToSoftWordsFR.set(" président ", " lion ")
+hardWordsToSoftWordsFR.set(" Macron ", " Sourire ")
+hardWordsToSoftWordsFR.set(" crise ", " rave ")
+
+
 
 function permuteElement() {
 
   for (var hardWord of hardWordsToSoftWordsFR.keys()) {
-    console.log(hardWord)
     var softWord = hardWordsToSoftWordsFR.get(hardWord)
-    console.log(softWord)
     var elements = document.getElementsByTagName('*')
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i]
@@ -19,7 +45,9 @@ function permuteElement() {
           var text = node.nodeValue;
           var replacedText = text.replace(hardWord,softWord);
           if (replacedText !== text) {
-            element.innerHTML =  text.replace(hardWord, "<span style='color:red'>" + softWord + "</span>");
+            //element.innerHTML =  text.replace(hardWord, "<span style='color:${createColor()}'>" + softWord + "</span>");
+            element.innerHTML =  text.replace(hardWord, "<span style='color:"+ createColor() + "'>" + softWord + "</span>");
+
           }
         }
       }
@@ -28,8 +56,10 @@ function permuteElement() {
 }
 setInterval(permuteElement, 3000)
 
-// function createColor() {
-//   const colors = ["#1F85DE", "#DBDE1F"]
-//   let colorRandom = colors[Math.floor(Math.random() * colors.length)]
-//   return colorRandom  
-// }
+function createColor() {
+  const colors = ["#D9A6FB", "#A6FBCA", "#FBB1A6", "#FCF36E", "#A0FCF1", "#FDC8F5"]
+  let colorRandom = colors[Math.floor(Math.random() * colors.length)]
+  return colorRandom  
+}
+
+// 
