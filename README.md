@@ -1,7 +1,7 @@
 EXTENSION DE NAVIGATEUR
 
 Projet collectif / 4 personnes à temps partiel
-Durée : 08 jours de ttravail
+Durée : 08 jours de travail + 1 journée de travail de ma part pour la personalisation de certaines options et configurations
 
 Objectif : création d'un extension
 sans contrainte de navigateur et d'orientation
