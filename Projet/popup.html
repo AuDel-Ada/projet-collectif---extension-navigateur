@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="popupStyle.css">
-  <title>My Test Extension Options</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popupStyle.css">
+    <title>Extension : options</title>
 </head>
+
 <body>
-  <div class=container>
-    <p>Background color :</p>
-    <ul>
-      <input type="checkbox" id="color">
-      <label>White</label>
-    </ul>
-    <p>Font properties :</p>
-    <ul>
-      <input type="checkbox"  id="fontFamily">
-      <label>Font-Family : Tahoma</label>
-      <br>
+  <main class=container>
+    <h1>Voici quelques options à votre disposition :</h1>
+    <h2>Images :</h2>
+    <h3><ul>
+      <input type="checkbox" id="pics">
+      <label>un joli dégradé, svp !</label>
+    </ul></h3>
+    <h2>Ecriture :</h2>
+    <h3><ul>
       <input type="checkbox" id="bold">
-      <label>
-        Font-Style : Bold
-      </label>
+      <label>stop aux pattes de mouche !</label>
+    </ul></h3>
+    <br>
+    <h2>Mais n'oubliez pas : certains paramètres sont automatiques !</h2>
+    <h3><ul>
+      -> couleur de fond moins lumineuse</li><br>
+      -> certains noms de famille remplacés ... </li>
     </ul>
-  </div>
-  <script src="appFont.js"></script>
+    <i>(On vous invite à vous renseigner sur "Le Grand Soulagement" pour plus d'infos)</i></h3>
+  </main>
+    <script src="appOptions.js"></script>
 </body>
 </html>
