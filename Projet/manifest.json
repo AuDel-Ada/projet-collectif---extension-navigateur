@@ -1,15 +1,15 @@
 {
-    "name": "Peaceful Reading",
-    "description": "Build a peaceful reading mode!",
+    "name": "Dans ma bulle",
+    "description": "Un peu de légèreté dans ce monde de brutes ! (Valable uniquement sur Chrome et performant suivant la structure des sites, à ce stade)",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
         {
         "matches": ["<all_urls>"],
-        "js": ["app.js", "appPics.js"]
+        "js": ["appAuto.js", "appOptions.js"]
         }
     ],
-    "permissions": ["storage", "activeTab", "scripting"],
+    "permissions": ["tabs", "storage", "activeTab", "scripting"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
@@ -26,7 +26,7 @@
     "web_accessible_resources":[
         {
         "matches": ["<all_urls>"],
-        "resources": ["degrade2.svg"]
+        "resources": ["degrade1.svg"]
         }
     ]
   }
